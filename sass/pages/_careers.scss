@@ -1,0 +1,16 @@
+.career {
+    padding: 5rem 0;
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 4rem 0 3rem;
+    }
+    p {
+        font-family: $fontQuat;
+        color: #212331;
+        line-height: 2.6rem;
+        a {
+            color: $colorRed
+        }
+    }
+}

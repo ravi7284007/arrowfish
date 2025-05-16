@@ -1,0 +1,362 @@
+.about {
+    h2 {
+        @include bigHeading;
+    }
+    padding:6rem 0 10rem;
+    .abt-img-1 {
+        position: absolute;
+        bottom: -3rem;
+        left: 0;
+    }
+    .abt-img-2 {
+        width: 90%
+    }
+    img.abt-img-1 {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.205)
+    }
+}
+
+.advisor {
+    h2 {
+        @include bigHeading;
+        color: #fff;
+    }
+    .tab__btn {
+        color: #fff;
+        padding: 5rem 0;
+        background: url(../images/abt-img-3.jpg) no-repeat center/cover fixed;
+        min-height: 50rem;
+    }
+    .tab-content {
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 5px;
+        box-shadow: -2px 1rem 3rem rgba(0, 0, 0, 0.18);
+        position: relative;
+        top: -5rem;
+        margin-top: -11rem;
+        min-height: 390px;
+        text-align: left;
+        h4 {
+            color: $colorRed;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin: 2rem 0;
+        }
+    }
+    .nav-abt {
+        justify-content: center;
+        text-align: center;
+        margin-top: 4rem;
+        li.nav-item {
+            width: 15%;
+        }
+        a {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
+            display: block;
+            line-height: normal;
+            position: relative;
+            padding: 1.8rem .8rem;
+            &::before {
+                content: '';
+                position: absolute;
+                height: 6rem;
+                width: .1rem;
+                background-color: #4f4e53;
+                right: -1px;
+                top: 50%;
+                transform: translateY(-50%)
+            }
+            img {
+                margin-bottom: 1rem;
+            }
+            &.active {
+                background: $colorRed;
+                transition: .1s all;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 16px;
+                    width: 16px;
+                    background-color: $colorRed;
+                    bottom: -7px;
+                    right: 32px;
+                    transform: rotate(45deg);
+                }
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__box {
+        padding: 5rem 0 3rem;
+        h5 {
+            font-size: 3.5rem;
+            font-weight: bold
+        }
+        p {
+            font-family: $fontQuat;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #212121
+        }
+    }
+    .arrow_color {
+        color: $colorRed;
+    }
+}
+
+.article {
+    margin: 3rem 0 0;
+    h3 {
+        font-size: 3.5rem;
+        font-family: $fontMontse;
+        font-weight: bold;
+    }
+    h5 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: $fontMontse;
+        margin: 2rem 0 3rem;
+    }
+    p {
+        font-family: $fontQuat;
+        font-size: 1.6rem;
+        &+a {
+            font-size: 1.3rem;
+            font-family: $fontMontse;
+            color: $colorRed;
+            margin-top: 5%
+        }
+    }
+    &__img {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        &.article__date {
+            .date {
+                right: unset;
+                left: 0;
+            }
+        }
+        .date {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: $colorRed;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 11px;
+            span {
+                display: block;
+                font-size: 3rem;
+                font-weight: bold
+            }
+        }
+    }
+}
+
+.owl-expert.consulting .owl-nav [class*=owl-]:hover {
+    background: transparent !important;
+    color: #222;
+    text-decoration: none;
+}
+
+.owl-expert.consulting {
+    padding: 3rem 0
+}
+
+.expert__box {
+    figure {
+        margin: 0;
+    }
+    figcaption {
+        text-align: center;
+        background-color: #f4f4f4;
+        padding: 2rem 0 1.5rem;
+        border: 1px solid #ebe9e9;
+        h3 {
+            font-size: 2rem;
+            font-family: $fontMontse;
+            font-weight: bold;
+            color: $colorRed;
+        }
+        p {
+            font-size: 1.4rem;
+            color: #303030;
+            font-family: $fontQuat;
+        }
+        .expert_social {
+            @include listStyle;
+            li {
+                display: inline-block;
+                a {
+                    color: #fff;
+                    .fa {
+                        text-align: center;
+                        margin: 0 .5rem;
+                        width: 36px;
+                        height: 36px;
+                        line-height: 3.5rem;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        font-size: 1.6rem;
+                    }
+                    .fa-facebook {
+                        background-color: #3a5797;
+                        &:hover {
+                            background-color: complement(#3a5797)
+                        }
+                    }
+                    .fa-twitter {
+                        background-color: #1b9bea;
+                        &:hover {
+                            background-color: complement(#1b9bea)
+                        }
+                    }
+                    .fa-linkedin {
+                        background-color: #0073af;
+                        &:hover {
+                            background-color: complement(#0073af)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.privacy__policy {
+    header {
+        p {
+            max-width: 80%;
+            margin: auto
+        }
+    }
+    h5 {
+        font-family: $fontMontse;
+        font-size: 2rem;
+        line-height: 4.6rem;
+        font-weight: bold;
+    }
+    p {
+        font-family: $fontQuat;
+        font-size: 1.6rem;
+        color: #212331;
+    }
+}
+
+.service__detail {
+    padding: 3rem 0;
+    p {
+        font-family: $fontQuat;
+        font-size: 1.6rem;
+        color: #212331;
+    }
+    &.about h2::before {
+        left: 5%;
+        transform: translateX(-0%);
+    }
+    &.about h2::after {
+        left: 0;
+        transform: translateX(-0%);
+    }
+    ul {
+        @include listStyle;
+        li {
+            font-size: 1.6rem;
+            font-family: $fontQuat;
+            font-weight: bold;
+            line-height: 3rem
+        }
+    }
+}
+
+.service__contact {
+    background: url(../images/services-img-bg.jpg) no-repeat top center/cover fixed;
+    padding: 6rem 0;
+    h2 {
+        font-size: 5.7rem;
+        font-weight: bold;
+        font-family: $fontMontse;
+    }
+    p {
+        font-family: $fontQuat;
+        font-size: 1.6rem;
+        color: #212331;
+        span {
+            color: $colorRed
+        }
+    }
+    a {
+        font-size: 1.5rem;
+        text-transform: uppercase
+    }
+}
+
+.services__points {
+    background: #f6f6f6;
+    padding: 5rem 0;
+    h4 {
+        font-size: 2.2rem;
+        color: #323232;
+        font-family: $fontMontse;
+        font-weight: bold
+    }
+    p {
+        font-family: $fontQuat;
+        font-size: 1.6rem;
+        color: #212331;
+    }
+    img {
+        width: 100%;
+    }
+    .service_box {
+        background-color: #fff;
+        box-shadow: 0 0 2px rgba(#000, .3);
+        transition: .4s all;
+        border-radius: 5px;
+        transform: translateY(5px);
+        margin-bottom: 3rem;
+        figure {
+            position: relative;
+            .btn {
+                position: absolute;
+                bottom: -26px;
+                left: 50%;
+                backface-visibility: hidden;
+                transform: translateX(-50%);
+                .fa {
+                    background: $colorRed;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 4rem;
+                    color: #fff;
+                    font-size: 1.8rem;
+                    transition: .4s all;
+                    transform: scale(0);
+                }
+            }
+        }
+        figcaption {
+            padding: 3rem 1.5rem;
+        }
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 18px rgba(#000, .4);
+            .btn {
+                .fa {
+                    transform: scale(1)
+                }
+            }
+        }
+    }
+}

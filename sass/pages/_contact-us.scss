@@ -1,0 +1,42 @@
+.contact__us {
+    &-address {
+        margin: 5rem 0 0;
+        .fa {
+            width: 6rem;
+            height: 6rem;
+            background: $colorRed;
+            color: #fff;
+            font-size: 3rem;
+            border-radius: 50%;
+            line-height: 5.8rem;
+        }
+        h4 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 1.5rem 0 1rem;
+        }
+    }
+    .location {
+        margin: 5rem 0 0;
+        h3 {
+            font-size: 2.6rem;
+            font-weight: bold
+        }
+        p {
+            font-size: 1.7rem;
+            color: #222;
+            margin: 1rem 0 2rem;
+        }
+        &_box {
+            background-color: #f4f4f4;
+            padding: 4rem 6rem;
+            textarea,
+            input {
+                background: #fff !important;
+            }
+        }
+        .map_heading {
+            margin-top: 4rem
+        }
+    }
+}

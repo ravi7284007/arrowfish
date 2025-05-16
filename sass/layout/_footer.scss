@@ -1,0 +1,190 @@
+footer {
+    background: url(../images/footer-bg.png) no-repeat top center/cover fixed #1f2a35;
+    padding: 6.5rem 0 3rem;
+    z-index: 99;
+    position: relative;
+    h3 {
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    p,
+    li,
+    a {
+        font-family: $fontQuat;
+        color: rgba(#fff, .6);
+        font-size: 1.5rem;
+    }
+    address {
+        ul {
+            display: flex;
+            margin-bottom: 1rem;
+            &:first-child {
+                margin-bottom: 5rem;
+            }
+            .fa {
+                color: $colorRed;
+                display: inline-block;
+                padding-right: 1rem;
+            }
+            a {
+                &:hover {
+                    color: $colorRed
+                }
+            }
+        }
+    }
+    ul {
+        @include listStyle;
+    }
+    .footer_social {
+        li {
+            float: left;
+            a {
+                padding: .8rem 0;
+                text-align: center;
+                border: 1px solid #3b4d60;
+                margin: 0 .5rem;
+                width: 36px;
+                height: 36px;
+                box-sizing: border-box;
+                &:hover {
+                    background: #fff;
+                    color: $colorRed
+                }
+            }
+        }
+    }
+    .menu {
+        li {
+            background: url(../images/arrow.png) no-repeat left center;
+            padding-left: 1.5rem;
+            a {
+                padding: 5px 0;
+                &:hover {
+                    color: $colorRed
+                }
+            }
+        }
+    }
+    .bottom-menu {
+        li {
+            display: inline-block;
+            &+li::before {
+                display: inline-block;
+                content: '/';
+                color: rgba(#fff, .6);
+                padding: 0 10px
+            }
+            a {
+                font-size: 1.4rem;
+                color: #fff;
+                &:hover {
+                    color: $colorRed
+                }
+            }
+        }
+    }
+    .newsletter {
+        margin: 6rem 0 3rem;
+        input {
+            font-size: 1.6rem;
+            height: 4.5rem;
+            font-size: 1.2rem;
+            &:focus {
+                outline: none;
+                box-shadow: none
+            }
+        }
+        .btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            font-size: 1.3rem;
+            background-color: $colorRed;
+            text-transform: uppercase;
+            border: 0;
+            &:hover {
+                background: #2b3641;
+            }
+        }
+    }
+    .footer_bottom {
+        margin-top: 2rem
+    }
+}
+
+.footer__map {
+    position: relative;
+    .footer_map {
+        margin-top: 2rem;
+    }
+    ul {
+        @include listStyle;
+        li {
+            img {
+                cursor: pointer;
+            }
+            position: absolute;
+            &:nth-child(1) {
+                left: 15px;
+                bottom: 56px;
+            }
+            &:nth-child(2) {
+                left: 40px;
+                bottom: 73px;
+            }
+            &:nth-child(3) {
+                left: 63px;
+                top: 32px;
+            }
+            &:nth-child(4) {
+                left: 92px;
+                bottom: 90px;
+            }
+            &:nth-child(5) {
+                right: 112px;
+                bottom: 100px;
+            }
+            &:nth-child(6) {
+                right: 48px;
+                bottom: 90px;
+            }
+            &:nth-child(7) {
+                right: 138px;
+                bottom: 15px;
+            }
+        }
+    }
+}
+
+.scrollup {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    color: #fff;
+    z-index: 999;
+    background: #b1030d;
+    padding: 0rem;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s all;
+    font-size: 1.6rem;
+    &:hover {
+        background-color: #2b3641;
+        cursor: pointer;
+    }
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}

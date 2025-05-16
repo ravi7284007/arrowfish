@@ -1,0 +1,43 @@
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    font-family: $fontMontse;
+}
+
+p {
+    font-size: 1.6rem;
+    color: rgba(#212331, .6);
+    font-family: $fontQuat;
+    font-weight: 500
+}
+
+@mixin bigHeading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #212331;
+    position: relative;
+    padding-bottom: 25px;
+    &::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $colorRed;
+        width: 60px;
+        height: 1px;
+        z-index: 1;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f6f6f6;
+        width: 128px;
+        height: 1px;
+    }
+}
